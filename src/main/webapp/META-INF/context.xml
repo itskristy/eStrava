@@ -1,0 +1,16 @@
+<Context>
+
+    <Resource name="mysqlpool" auth="Container" type="javax.sql.DataSource"
+              initialSize="5" maxTotal="16" minIdle="5" maxIdle="15"
+              validationQuery="select now()" validationQueryTimeout="5"
+              testWhileIdle="true" testOnBorrow="true" testOnReturn="false"
+              timeBetweenEvictionRunsMillis="30000" minEvictableIdleTimeMillis="60000"
+              removeAbandonedOnBorrow="true" removeAbandonedTimeout="300" logAbandoned="false"
+              poolPreparedStatements="true"
+              username="root" password="root"
+              driverClassName="com.mysql.cj.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/estrava?autoReconnect=true"
+              connectionProperties="useUnicode=yes;characterEncoding=utf8;useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC"
+    />
+
+</Context>

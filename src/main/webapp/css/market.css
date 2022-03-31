@@ -1,0 +1,64 @@
+.container .market_container {
+    display: inline-block;
+    position: absolute;
+    margin: 0 0 0 40px;
+    width: 75%;
+    height: 92vh;
+    overflow: scroll;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    border-style: none solid none solid;
+}
+
+.market_title {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.market_card {
+    margin-top: 15px;
+}
+
+.market_card .table td {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.market_body tr {
+    line-height: 2.5;
+}
+
+.market_card {
+    margin-top: 8px;
+    border-radius: 15px;
+    padding: 0px 10px;
+    border: 1px lightgrey solid;
+}
+
+.market_order_panel .order_button {
+    right: 0;
+    padding: 0 10px 10px 0;
+    position: absolute;
+}
+.market_order_panel .packCheckbox {
+    margin: 15px 0 0 10px;
+}
+
+.packOrder {
+    margin-right: 10px;
+}
+
+.market_order_panel .form-check-input {
+    margin-right: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .market_container {
+        width: 100%;
+        display:block;
+        margin: 0;
+        border-style: none; }
+}

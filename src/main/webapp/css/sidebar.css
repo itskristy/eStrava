@@ -1,0 +1,92 @@
+.container .sidebar {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 95vh;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    overflow: scroll;
+    border-style: none solid none none;
+}
+
+.sidebar_subtitle {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.sidebar_card {
+    padding: 0 5px 5px 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.form-control.date {
+    padding: 0 0 0 5px; !important;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+}
+
+.form-check, .dateCheckbox {
+    font-size: 13px;
+    padding-left: 28px; !important;
+}
+
+#show_btn {
+    padding: 13px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+
+#show_btn_text {
+    font-size: 13px;
+}
+
+label {
+    padding: 0 5px 0 15px;
+    float: left;
+    line-height: 1.6;
+    font-size: 13px;
+    font-family: "Arial", Arial, sans-serif;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+    padding: 0 4px 0 6px
+}
+
+#allergens_table {
+    font-size: 12px;
+}
+
+.table {
+    border-collapse: initial; !important;
+    border-spacing: 0 5px;
+}
+
+.table td {
+    border: none; !important;
+}
+
+#allergen_id {
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+
+#allergen_name {
+    padding-left: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .sidebar {
+        width: 100%;
+        height: auto;
+        overflow: scroll;
+        display:block;
+        border-style: none none solid none; }
+}
+

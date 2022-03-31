@@ -1,0 +1,68 @@
+.profile_title {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.users_name {
+    background-color: lightgray;
+    text-align: center;
+    font-style: italic;
+}
+
+.container .profile_container {
+    display: inline-block;
+    position: absolute;
+    margin: 0 0 0 40px;
+    width: 75%;
+    height: 100vh;
+    overflow: scroll;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    border-style: none solid none solid;
+}
+
+.profile_card {
+    margin-top: 15px;
+    width: 60vw;
+    position: relative;
+    left: 10%;
+    border: 1px lightgrey solid;
+}
+
+.card_items {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+#save_brn {
+    margin: 0 auto;
+    display: block;
+}
+
+#update_err {
+    display: none;
+    padding: 0 0 5px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .profile_container {
+        width: 95%;
+        display:block;
+        margin: 0;
+        height: auto;
+        border-style: none; }
+
+    .profile_card {
+        left: 5%;
+        width: 80vw;
+    }
+
+    .profile_title {
+        border: none;
+    }
+}

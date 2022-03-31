@@ -1,0 +1,94 @@
+.meals_title {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.container .manage_meals_container {
+    display: inline-block;
+    position: absolute;
+    margin: 0 0 0 40px;
+    width: 75%;
+    height: 91vh;
+    overflow: scroll;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    border-style: none solid none solid;
+}
+
+.meals_card {
+    margin-top: 15px;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+}
+
+.card-body {
+    padding: 0;
+}
+
+.btn.btn-link {
+    color: steelblue;
+    text-decoration: none;
+    font-style: oblique;
+}
+
+.btn.btn-link:focus{
+    box-shadow: none;
+}
+
+.table thead th {
+    border: none;
+    padding-left: 0;
+}
+
+.card-body .table td {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-control.price {
+    width: 60%;
+}
+
+.name {
+    padding-left: 15px !important;
+    padding-right: 50px !important;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.allergen {
+    margin-right: 15px;
+}
+
+.modal-footer {
+    background-color: #f8f9fa;
+}
+
+.new-entry {
+    position: sticky;
+    bottom: 0;
+    background-color: white !important;
+}
+
+.col_name {
+    font-size: 13px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .manage_meals_container {
+        width: 100%;
+        display:block;
+        margin: 0;
+        border-style: none; }
+
+    .meals_title {
+        border: none;
+    }
+}

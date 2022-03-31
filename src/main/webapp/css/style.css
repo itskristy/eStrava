@@ -1,0 +1,103 @@
+body {
+    font-family: "Arial", Arial, sans-serif;
+    font-size: 15px; !important;
+    overflow: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.top_line {
+    height: 4px;
+    background-color: steelblue;
+}
+
+.navbar {
+    box-shadow: 0 1px 5px -1px lightgrey;
+}
+
+.navbar-expand-lg {
+    padding: 10px 120px 10px 100px; !important;
+}
+
+.dropdown-menu.show {
+    width: 250px;
+    left: -80%; !important;
+}
+
+.container {
+    max-width: 100%; !important;
+}
+
+.btn-primary {
+    background-color: steelblue; !important;
+    border-color: steelblue;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: steelblue; !important;
+    border-color: steelblue;
+}
+
+.dropdown-menu.show {
+    font-size: 14px;
+}
+
+.form-group.order {
+    margin-bottom: 0; !important;
+}
+
+a {
+    color: steelblue;
+}
+
+a:hover, a:active {
+    color: steelblue;
+}
+
+
+#login_err, #reg_err, #update_err {
+    padding: 0 0 5px 8px;
+    color: red;
+    font-size: 13px;
+}
+
+#reg_err_mss {
+    display: inline-block;
+}
+
+.unclickable_item {
+    font-style: italic;
+    pointer-events: none;
+}
+
+.table.dataTable thead th {
+    border: none;
+}
+
+.table.dataTable.no-footer {
+    padding-bottom: 15px;
+    border: 1px lightgrey;
+    border-style: none none solid none;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    margin: 10px 0;
+    float: left !important;
+}
+
+.dataTables_wrapper .dataTables_filter { float: left !important; padding-bottom: 5px }
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding : 0 !important;
+    margin-left: 10px !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {width: 100%;}
+
+    body {
+        overflow: scroll;
+    }
+}

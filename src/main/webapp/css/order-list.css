@@ -1,0 +1,68 @@
+.container .order_list_container {
+    display: inline-block;
+    position: absolute;
+    margin: 0 0 0 40px;
+    width: 75%;
+    height: 92vh;
+    overflow: scroll;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    border-style: none solid none solid;
+}
+
+.order_list_title {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.order_list_header {
+    margin-top: 10px;
+    padding-bottom: 6px;
+    display: flex;
+    border: 1px lightgrey;
+    border-style: none none solid none;
+    justify-content: center;
+}
+
+.order_list_header div {
+    padding-top: 6px;
+    margin: 0 auto;
+    display: inline-block;
+    width: 25vw;
+}
+
+.order_list_label {
+    padding: 0 5px 0 15px;
+    float: left;
+    line-height: 2.6;
+    font-size: 13px;
+    font-family: "Arial", Arial, sans-serif;
+}
+
+.order_list_card {
+    margin-top: 15px;
+}
+
+.order_list_card .table td {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.order_list_body tr {
+    line-height: 2.5;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .order_list_container {
+        width: 100%;
+        display:block;
+        margin: 0;
+        border-style: none; }
+
+    .order_list_title {
+        border: none;
+    }
+}

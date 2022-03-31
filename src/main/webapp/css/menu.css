@@ -1,0 +1,89 @@
+.container .menu_container {
+    display: inline-block;
+    position: absolute;
+    margin: 0 0 0 40px;
+    width: 75%;
+    height: 92vh;
+    overflow: scroll;
+    padding: 20px 10px 0 10px;
+    border: 1px lightgrey;
+    border-style: none solid none solid;
+}
+
+.menu_title {
+    color: steelblue;
+    font-weight: bold;
+    border: 1px lightgrey;
+    padding-left: 10px;
+    border-style: none none solid none;
+}
+
+.menu_date {
+    margin-top: 8px;
+    background-color: lightgray;
+    padding-left: 10px;
+}
+
+.meals_container {
+    margin-top: 8px;
+    border-radius: 15px;
+    padding: 0px 10px;
+    border: 1px lightgrey solid;
+}
+
+#breakfast_subtitle,
+#lunch_subtitle,
+#dinner_subtitle {
+    color: steelblue;
+    font-weight: bold;
+}
+
+.table th {
+    border: none;
+}
+
+.column_name {
+    font-size: 13px;
+    padding: 0 !important;
+}
+
+.form-control.portions {
+    height: 25px;
+    width: 50px;
+    padding: 2.5px;
+}
+
+.meals_container .table td {
+    padding-left: 0;
+}
+
+.order_panel .order_button {
+    right: 0;
+    padding: 0 10px 10px 0;
+    position: absolute;
+}
+.order_panel .packCheckbox {
+    margin: 15px 0 0 10px;
+}
+
+.packOrder {
+    margin-right: 10px;
+}
+
+.order_panel .form-check-input {
+    margin-right: 15px;
+}
+
+.breakfast_body tr,
+.lunch_body tr,
+.dinner_body tr {
+    line-height: 2.5;
+}
+
+@media only screen and (max-width: 600px) {
+    .container .menu_container {
+        width: 100%;
+        display:block;
+        margin: 0;
+        border-style: none; }
+}
