@@ -77,13 +77,61 @@
         overflow-y: scroll;
         border-style: none; }
 
-    .my_orders_title {
+    .my_orders_title, .my_orders_header {
         border: none;
     }
 
-    tbody .order-body {
-        font-size: 12px;
+    .my_orders_header div {
+        display: block;
+        width: 30%;
     }
+
+    .my_orders_card > table, .my_orders_card, .my_orders_card thead, .my_orders_card tbody,
+    .my_orders_card th, .my_orders_card td, .my_orders_card tr {
+        display: block;
+    }
+
+    .my_orders_card thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .my_orders_card td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .my_orders_card td:before, .my_orders_card th:before {
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding: 0 10px;
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .my_orders_card th:before {
+        padding-right: 10px;
+    }
+
+    .order_body tr {
+        line-height: 1;
+    }
+
+    .btn {
+        padding: 0;
+        line-height: 0;
+    }
+
+    .my_orders_card th:nth-of-type(1):before { content: "Dátum objednávky"; }
+    .my_orders_card td:nth-of-type(1):before { content: " "; }
+    .my_orders_card td:nth-of-type(2):before { content: "Cena"; }
+    .my_orders_card td:nth-of-type(3):before { content: "Balné"; }
+    .my_orders_card td:nth-of-type(4):before { content: "Dátum stravy"; }
+    .my_orders_card td:nth-of-type(6):before { content: "Burza"; }
 }
 
 
