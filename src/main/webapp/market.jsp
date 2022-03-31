@@ -8,7 +8,7 @@
             <div class="menu_date"></div>
             <form method="post" action="insert-marketed-order" name="marketedOrder" id="marketedOrder" role="form">
                 <div class="market_card">
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="market">
                         <thead>
                         <tr>
                             <th scope="col" class="column_name col-md-1"></th>
@@ -130,6 +130,24 @@
                     $('.' + index + ' > .col_subsidized_price').html((item.subsidizedPricePoliceman).toFixed(2) + "€")
                 } else if (employee === "civilný zamestnanec") {
                     $('.' + index + ' > .col_subsidized_price').html((item.subsidizedPriceCE).toFixed(2) + "€")
+                }
+            });
+
+            $('#market').DataTable({
+                ordering:  false,
+                searching: false,
+                info: false,
+                lengthChange: false,
+                pagingType: "simple",
+                pageLength: 8,
+                retrieve: true,
+
+                language: {
+                    paginate: {
+                        "next": '<i class="bi bi-chevron-right"></i>',
+                        "previous": '<i class="bi bi-chevron-left"></i>'
+                    },
+                    zeroRecords: "Nenašli sa žiadne zodpovedajúce záznamy."
                 }
             });
         }
