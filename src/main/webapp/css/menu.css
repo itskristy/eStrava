@@ -80,6 +80,11 @@
     line-height: 2.5;
 }
 
+.no_menu {
+    margin-top: 15px;
+    padding-left: 15px;
+}
+
 @media only screen and (max-width: 600px) {
     .container .menu_container {
         width: 100%;

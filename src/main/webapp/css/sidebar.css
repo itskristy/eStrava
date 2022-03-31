@@ -85,7 +85,6 @@ span {
     .container .sidebar {
         width: 100%;
         height: auto;
-        overflow: scroll;
         display:block;
         border-style: none none solid none; }
 }

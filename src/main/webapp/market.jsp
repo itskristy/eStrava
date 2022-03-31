@@ -26,6 +26,9 @@
                         </tbody>
                     </table>
                 </div>
+
+                <div class="no_market">Momentálne nie sú v burze žiadna jedla.</div>
+
                 <% if(session.getAttribute("logged") != null) {%>
                 <div class="market_order_panel">
                     <div class="packCheckbox">
@@ -55,6 +58,7 @@
             }
         });
 
+        $('.no_market').hide();
         $('#date_from').change(function () {
             showMarket();
             $('#packOrder').prop('checked', false);
@@ -99,9 +103,11 @@
             console.log("There're no marketed items for this day!");
             $('.market_card').hide();
             $('.market_order_panel').hide();
+            $('.no_market').show();
         } else {
             $('.market_card').show();
             $('.market_order_panel').show();
+            $('.no_market').hide();
 
             for(let i = 0; i < size; i++) {
                 $('.market_body').append($('<tr class="' + i + '"></tr>'));

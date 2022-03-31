@@ -110,6 +110,7 @@
                 </tbody>
             </table>
         </div>
+            <div class="no_menu">Pre tento deň nebolo nájdené žiadne menu.</div>
 
         <% if(session.getAttribute("logged") != null) {%>
         <div class="order_panel">
@@ -152,6 +153,7 @@
         $('#lunch').hide();
         $('#dinner').hide();
         $('.order_panel').hide();
+        $('.no_menu').hide();
         checkTime();
     });
 
@@ -227,11 +229,13 @@
             $('#lunch').hide();
             $('#dinner').hide();
             $('.order_panel').hide();
+            $('.no_menu').show();
         } else {
             $('#breakfast').show();
             $('#lunch').show();
             $('#dinner').show();
             $('.order_panel').show();
+            $('.no_menu').hide();
 
             data.forEach(item => {
                 if(item.category === 3) {
