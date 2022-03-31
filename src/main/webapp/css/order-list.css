@@ -62,7 +62,52 @@
         margin: 0;
         border-style: none; }
 
-    .order_list_title {
+    .order_list_title, .order_list_header {
         border: none;
     }
+
+    .order_list_header div {
+        display: block;
+        width: 50%;
+    }
+
+    .order_list_card > table, .order_list_card, .order_list_card thead, .order_list_card tbody,
+    .order_list_card th, .order_list_card td, .order_list_card tr {
+        display: block;
+    }
+
+    .order_list_card thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .order_list_card td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .order_list_card td:before, .order_list_card th:before {
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding: 0 10px;
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .order_list_card th:before {
+        padding-right: 10px;
+    }
+
+    .order_list_body tr {
+        line-height: 1;
+    }
+
+    .order_list_card th:nth-of-type(1):before { content: "Stravník"; }
+    .order_list_card td:nth-of-type(1):before { content: " "; }
+    .order_list_card td:nth-of-type(2):before { content: "Objednané jedlo"; }
+    .order_list_card td:nth-of-type(3):before { content: "Zabaliť"; }
 }

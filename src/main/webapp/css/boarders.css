@@ -62,7 +62,52 @@
         margin: 0;
         border-style: none; }
 
-    .boarders_title {
+    .boarders_title, .boarders_header {
         border: none;
     }
+
+    .boarders_header div {
+        display: block;
+        width: 30%;
+    }
+
+    .boarders_card > table, .boarders_card, .boarders_card thead, .boarders_card tbody,
+    .boarders_card th, .boarders_card td, .boarders_card tr {
+        display: block;
+    }
+
+    .boarders_card thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .boarders_card td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .boarders_card td:before, .boarders_card th:before {
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding: 0 10px;
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .boarders_card th:before {
+        padding-right: 10px;
+    }
+
+    .boarders_body tr {
+        line-height: 1;
+    }
+
+    .boarders_card th:nth-of-type(1):before { content: "Stravník"; }
+    .boarders_card td:nth-of-type(1):before { content: " "; }
+    .boarders_card td:nth-of-type(2):before { content: "E-mail"; }
+    .boarders_card td:nth-of-type(3):before { content: "Kredit"; }
 }
