@@ -66,4 +66,10 @@
         display:block;
         margin: 0;
         border-style: none; }
+
+    .market_title, .market_card { border: none; }
+
+    .market_body .col_nr { width: 15%; }
+    .market_body .col_price { width: 25%; }
+    .market_body .col_meal { width: 35%; }
 }
