@@ -221,6 +221,10 @@
                                 $('.' + index + ' > .delete_btn > .btn').hide();
                             }
 
+                            if (Math.round((today-new Date(menu.sqlDate))/(1000*60*60*24)) > 2) {
+                                $('.' + index + ' > .delete_btn > .btn').hide();
+                            }
+
                             if((cTime >= "06:45:00" && cTime <= "12:00:00") && new Date(menu.sqlDate).toISOString().slice(0, 10) === cDate && !item.isMarketed) {
                                 $('.' + index + ' > .market_btn > .btn').show();
                             } else {

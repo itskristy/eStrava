@@ -60,9 +60,17 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.0</version>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <configuration>
+                    <schemaVersion>V2</schemaVersion>
+                    <resourceGroup>eStravaGroup</resourceGroup>
+                    <appName>estrava</appName>
+                    <region>westeurope</region>
+                    <pricingTier>F1</pricingTier>
+
+                </configuration>
             </plugin>
         </plugins>
     </build>
