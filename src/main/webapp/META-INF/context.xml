@@ -7,7 +7,7 @@
               timeBetweenEvictionRunsMillis="30000" minEvictableIdleTimeMillis="60000"
               removeAbandonedOnBorrow="true" removeAbandonedTimeout="300" logAbandoned="false"
               poolPreparedStatements="true"
-              username="mysqladmin" password="eStrava160"
+              username="mysqladmin" password="estrava160."
               driverClassName="com.mysql.cj.jdbc.Driver"
               url="jdbc:mysql://azuremysql-estrava.mysql.database.azure.com:3306/estrava?useSSL=true"
               connectionProperties="useUnicode=yes;characterEncoding=utf8;useJDBCCompliantTimezoneShift=true;useLegacyDatetimeCode=false;serverTimezone=UTC"
