@@ -179,6 +179,26 @@ public class UserController {
         return numOfUpdated;
     }
 
+    public int updateUserPasswordByEmail(String password, String email) {
+        int numOfUpdated = 0;
+        String sql = "UPDATE users SET password=? WHERE email = ?";
+
+        try (
+                Connection con = DatabaseConnectionManager.getConnection();
+                PreparedStatement ps = con.prepareStatement(sql)
+        ) {
+
+            ps.setString(1, password);
+            ps.setString(2, email);
+            numOfUpdated = ps.executeUpdate();
+
+        } catch (SQLException | NamingException e) {
+            e.printStackTrace();
+        }
+
+        return numOfUpdated;
+    }
+
     public List<User> selectAllActiveUsers() {
         List<User> users = new ArrayList<>();
         String sql = "SELECT * FROM users WHERE NOT role='admin'";

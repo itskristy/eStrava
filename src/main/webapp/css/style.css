@@ -57,13 +57,13 @@ a:hover, a:active {
 }
 
 
-#login_err, #reg_err, #update_err {
+#login_err, #reg_err, #update_err, #change_err {
     padding: 0 0 5px 8px;
     color: red;
     font-size: 13px;
 }
 
-#reg_err_mss {
+#reg_err_mss, #change_err_mss {
     display: inline-block;
 }
 

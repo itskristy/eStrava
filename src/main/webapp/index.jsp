@@ -113,7 +113,7 @@
                         </div>
                         <div class="form-group text-center">
                             Nemáte účet? <a href="" id="btn_register">Zaregistrujte sa</a><br>
-                            Zabudli ste heslo?
+                            Zabudli ste heslo? <a href="" id="btn_change_password">Obnoviť</a><br>
                         </div>
                     </form>
                     <form method="post" action="register" id="register" name="register" class="form" role="form">
@@ -121,7 +121,7 @@
                             <input id="r_username" name="username" placeholder="Prihlasovacie meno" class="form-control form-control-sm" type="text" required>
                         </div>
                         <div class="form-group">
-                            <input id="email" name="email" placeholder="E-mail" class="form-control form-control-sm" type="text" required>
+                            <input id="email" name="email" placeholder="E-mail" class="form-control form-control-sm" type="email" required>
                         </div>
                         <div class="form-group">
                             <input id="r_password" name="password" placeholder="Heslo" class="form-control form-control-sm" type="password" required>
@@ -143,6 +143,21 @@
                         </div>
                         <div class="form-group text-center">
                             Už máte účet? <a href="" id="btn_login">Prihláste sa</a>
+                        </div>
+                    </form>
+                    <form method="post" action="change-password" id="forgotten_password" name="forgotten_password" class="form" role="form">
+                        <div class="form-group">
+                            <input id="email_forgotten" name="email" placeholder="E-mail" class="form-control form-control-sm" type="email" required>
+                        </div>
+                        <div class="form-group">
+                            <input id="new_password" name="new_password" placeholder="Nové heslo" class="form-control form-control-sm" type="password" required>
+                        </div>
+                        <div id="change_err"><i class="bi bi-exclamation-circle"></i> <div id="change_err_mss"></div></div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">Obnoviť heslo</button>
+                        </div>
+                        <div class="form-group text-center">
+                            Už máte účet? <a href="" id="btn_login_two">Prihláste sa</a>
                         </div>
                     </form>
                 </ul>
@@ -182,6 +197,7 @@
 <script>
         //toggle between login / register form
         $("#register").hide();
+        $("#forgotten_password").hide()
         $("#btn_register").click(function(event){
             event.preventDefault();
             $("#login").toggle();
@@ -192,6 +208,18 @@
             event.preventDefault();
             $("#register").toggle();
             $("#login").toggle(1000);
+        });
+
+        $("#btn_login_two").click(function(event){
+            event.preventDefault();
+            $("#forgotten_password").toggle();
+            $("#login").toggle(1000);
+        });
+
+        $("#btn_change_password").click(function(event){
+            event.preventDefault();
+            $("#login").toggle();
+            $("#forgotten_password").toggle(1000);
         });
 
         // show, hide identification field
@@ -238,10 +266,23 @@
                     }
                 }
             });
+            $("#forgotten_password").validate({
+                rules: {
+                    email_forgotten: {
+                        required: true,
+                        email: true,
+                    },
+                    new_password: {
+                        required: true,
+                        password: true,
+                    }
+                }
+            });
 
             $('#identification').hide();
             $('#login_err').hide();
             $('#reg_err').hide();
+            $('#change_err').hide();
 
             // display today's date
             $('#date_from').val(new Date().toISOString().slice(0, 10));
@@ -280,6 +321,35 @@
                     success: function (data) {
                         if (data === "Login failed") {
                             $('#login_err').show();
+                        } else {
+                            window.location = 'menu.jsp';
+                        }
+                    }
+                });
+            }
+            return false;
+        });
+
+        // change password
+        let passw_form = $('#forgotten_password');
+        passw_form.submit(function () {
+            let email = $("#email_forgotten").val();
+            let password = $("#new_password").val();
+
+            if (email && password) {
+                $.ajax({
+                    type: passw_form.attr('method'),
+                    url: passw_form.attr('action'),
+                    data: passw_form.serialize(),
+                    success: function (data) {
+                        if (data === "Change failed") {
+                            $('#change_err').show();
+                            $('#change_err_mss').text("E-mail neexistuje.");
+
+                        } else if (data === "Change failed - 1") {
+                            $('#change_err').show();
+                            $('#change_err_mss').text("Heslo sa nepodarilo obnoviť.");
+
                         } else {
                             window.location = 'menu.jsp';
                         }
