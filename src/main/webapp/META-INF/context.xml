@@ -1,6 +1,6 @@
 <Context>
 
-    <Resource name="mysqlpool" auth="Container" type="javax.sql.DataSource"
+    <Resource name="mysqlpool" global="mysqlpool" auth="Container" type="javax.sql.DataSource"
               initialSize="5" maxTotal="16" minIdle="5" maxIdle="15"
               validationQuery="select now()" validationQueryTimeout="5"
               testWhileIdle="true" testOnBorrow="true" testOnReturn="false"

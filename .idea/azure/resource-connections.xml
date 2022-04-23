@@ -2,7 +2,6 @@
 <project version="4">
   <component name="connections">
     <connection envPrefix="AZURE_SQL_" type="Microsoft.Sql:Jetbrains.IJModule">
-      <resource type="Microsoft.Sql">997e82f197e96bb14dcdf6f0d177343e</resource>
       <consumer type="Jetbrains.IJModule">diplomovka</consumer>
     </connection>
   </component>
